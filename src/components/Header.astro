@@ -1,0 +1,69 @@
+---
+import "../styles/App.css";
+import "../styles/Header.css";
+import DarkMode from './DarkMode.astro';
+
+interface Props {
+	isHomePage?: boolean;
+}
+
+const {
+	isHomePage = Astro.url.pathname === "/" ||
+		Astro.url.pathname === "/index.html",
+} = Astro.props;
+---
+
+<header class="site-header">
+    <div id="menu-btn" class="fas fa-bars"></div>
+
+    <a class="logo" href="/">
+        <p>=(<span>NAHUEL61920</span>)=></p>
+    </a>
+
+    <nav class="navbar">
+        {isHomePage ? (
+            <>
+                <a href="#inicio" data-i18n="home">Inicio</a>
+                <a href="#sobre-mi" data-i18n="about">Sobre mi</a>
+                <a href="#servicios" data-i18n="services">Servicios</a>
+                <a href="#proyectos" data-i18n="projects">Proyectos</a>
+                <a href="#contactos" data-i18n="contact">Contactos</a>
+            </>
+        ) : (
+            <>
+                <a href="/" data-i18n="home">Inicio</a>
+                <a href="/about" data-i18n="about">Sobre mi</a>
+                <a href="/service" data-i18n="services">Servicios</a>
+                <a href="/project" data-i18n="projects">Proyectos</a>
+            </>
+        )}
+        <div id="buttons">
+            <img onclick="window.setLanguage('en-US')" src="https://nahuel61920.github.io/Portafoliovirtual/img/en.png" alt="EEUU" />
+            <img onclick="window.setLanguage('es-ES')" src="https://nahuel61920.github.io/Portafoliovirtual/img/es.png" alt="España" />
+        </div>
+    </nav>
+    <div class="switch" id="switch">
+        <DarkMode />
+    </div>
+</header>
+
+<script>
+    // Responsive mobile menu toggle
+    const menuBtn = document.querySelector('#menu-btn');
+    const navbar = document.querySelector('.navbar');
+    const header = document.querySelector('.site-header');
+
+    menuBtn?.addEventListener('click', () => {
+        navbar?.classList.toggle('activar');
+    });
+
+    // Handle background opacity on scroll
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 0) {
+            header?.classList.add('activar');
+        } else {
+            header?.classList.remove('activar');
+        }
+        navbar?.classList.remove('activar');
+    });
+</script>

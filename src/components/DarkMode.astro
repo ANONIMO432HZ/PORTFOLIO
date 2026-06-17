@@ -1,0 +1,53 @@
+---
+import "../styles/DarkMode.css";
+---
+
+<div>
+    <div id="darkMode">
+        <span><i class="fas fa-sun"></i></span>
+        <span><i class="fas fa-moon"></i></span>
+    </div>
+</div>
+
+<script>
+    const darkModeBtn = document.getElementById("darkMode");
+    const clickedClass = "clicked";
+    const lightTheme = "light";
+    const darkTheme = "dark";
+
+    function updateButtonState() {
+        const theme = localStorage.getItem("theme") || darkTheme;
+        if (theme === darkTheme) {
+            darkModeBtn?.classList.add(clickedClass);
+        } else {
+            darkModeBtn?.classList.remove(clickedClass);
+        }
+    }
+
+    function switchTheme() {
+        const body = document.body;
+        const html = document.documentElement;
+        let theme = localStorage.getItem("theme") || darkTheme;
+
+        if (theme === darkTheme) {
+            body.classList.remove(darkTheme);
+            body.classList.add(lightTheme);
+            html.classList.remove(darkTheme);
+            html.classList.add(lightTheme);
+            darkModeBtn?.classList.remove(clickedClass);
+            localStorage.setItem("theme", lightTheme);
+        } else {
+            body.classList.remove(lightTheme);
+            body.classList.add(darkTheme);
+            html.classList.remove(lightTheme);
+            html.classList.add(darkTheme);
+            darkModeBtn?.classList.add(clickedClass);
+            localStorage.setItem("theme", darkTheme);
+        }
+    }
+
+    darkModeBtn?.addEventListener("click", switchTheme);
+
+    // Run on load
+    updateButtonState();
+</script>

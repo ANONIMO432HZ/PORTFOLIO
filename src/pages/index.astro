@@ -1,0 +1,64 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import ParticleBackground from '../components/ParticleBackground.astro';
+import Content from '../components/Content.astro';
+import AboutSection from '../components/AboutSection.astro';
+import ServiceSection from '../components/ServiceSection.astro';
+import ProjectSection from '../components/ProjectSection.astro';
+import ContactSection from '../components/ContactSection.astro';
+import ScrollToTop from '../components/ScrollToTop.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout>
+    <!-- Loader screen -->
+    <div id="loading-pag" class="loading-pag">
+        <div class="loader">
+            <span>=(Nahuel61920)=></span>
+            <span>=(Nahuel61920)=></span>
+        </div>
+    </div>
+
+    <!-- Main Content Wrapper -->
+    <div id="main-content" style="display: none;">
+        <Header />
+        
+        <ParticleBackground />
+        
+        <Content />
+
+        <main>
+            <AboutSection />
+            <ServiceSection />
+            <ProjectSection />
+            <ContactSection />
+        </main>
+
+        <ScrollToTop />
+        
+        <Footer />
+    </div>
+</Layout>
+
+<script>
+    // Handle Loading Page
+    document.addEventListener("DOMContentLoaded", () => {
+        const loader = document.getElementById("loading-pag");
+        const content = document.getElementById("main-content");
+        
+        setTimeout(() => {
+            if (loader && content) {
+                // Smooth fade out
+                loader.style.transition = "opacity 0.5s ease";
+                loader.style.opacity = "0";
+                
+                content.style.display = "block";
+                
+                setTimeout(() => {
+                    loader.style.display = "none";
+                }, 500);
+            }
+        }, 2000); // 2 seconds loader display
+    });
+</script>

@@ -1,0 +1,30 @@
+---
+import "../styles/ScrollToTop.css";
+---
+
+<button id="scroll-to-top" class="cm-up" style="display: none;"> 
+    <span class="cm-icon">
+        <i class="fas fa-chevron-up"></i>
+    </span>
+</button>
+
+<script>
+    const scrollBtn = document.getElementById("scroll-to-top");
+
+    window.addEventListener("scroll", () => {
+        if (scrollBtn) {
+            if (window.scrollY > 100) {
+                scrollBtn.style.display = "block";
+            } else {
+                scrollBtn.style.display = "none";
+            }
+        }
+    });
+
+    scrollBtn?.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+</script>

@@ -1,0 +1,215 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import ParticleBackground from '../../components/ParticleBackground.astro';
+import ScrollToTop from '../../components/ScrollToTop.astro';
+import Footer from '../../components/Footer.astro';
+import '../../../src/styles/ProjectPage.css';
+---
+
+<Layout title="Proyectos Juegos =(Nahuel61920)=>">
+    <Header isHomePage={false} />
+    
+    <ParticleBackground />
+
+    <main>
+        <section class="proyectos mas-proyect" id="proyectos">
+            <h1 class="heading" data-i18n="projects">Proyectos</h1>
+            <nav class="navbar nav-proj">
+                <a href="/project" data-i18n="site-web">Páginas web</a>
+                <a href="/project/app">Apps</a>
+                <a href="/project/game" class="active" data-i18n="games">juegos</a>
+            </nav>
+        </section>
+
+        <!-- Projects Grid -->
+        <section class="projects__grid games">
+            <div class="projects__item">
+                <a href="#" class="project-trigger" data-modal="modal-game-4">
+                    <img src="/img/proyecto-game-4.jpg" alt="Memorama" class="projects__img" />
+                </a>
+            </div>
+            <div class="projects__item">
+                <a href="#" class="project-trigger" data-modal="modal-game-3">
+                    <img src="/img/proyecto-game-3.jpg" alt="Ajedrez" class="projects__img" />
+                </a>
+            </div>
+            <div class="projects__item">
+                <a href="#" class="project-trigger" data-modal="modal-game-2">
+                    <img src="/img/proyecto-game-2.jpg" alt="Snake" class="projects__img" />
+                </a>
+            </div>
+            <div class="projects__item">
+                <a href="#" class="project-trigger" data-modal="modal-game-1">
+                    <img src="/img/proyecto-game-1.jpg" alt="Preguntas y Respuestas" class="projects__img" />
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modals -->
+    <!-- Modal 4 -->
+    <div id="modal-game-4" class="overlay">
+        <div class="contenedor-modal">
+            <button class="boton-cerrar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                </svg>
+            </button>
+            <div class="content-modal">
+                <div class="pw-content">
+                    <div class="eins-modal-preview"><img src="/img/proyecto-game-4.jpg" alt="" /></div>
+                    <div class="eins-modal-text">
+                        <p>Memorama</p>
+                        <p data-i18n="projectsGame-info-4-p2">Debes adivinar los 2 pares de cartas en el menor tiempo y con menos clicks.</p>
+                        <div class="eins-modal-text-2">
+                            <span data-i18n="projects-link">Enlace:</span> <a href="https://nahuel61920.github.io/Memorama" target="_blank">https://nahuel61920.github.io/Memorama</a>
+                        </div>
+                        <div class="eins-modal-text-3">
+                            <span data-i18n="projects-tec">Tecnologías Utilizadas:</span>
+                            <div class="eins-modal-tec">
+                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="HTML" />
+                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="CSS" />
+                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg" alt="JS" />
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div id="modal-game-3" class="overlay">
+        <div class="contenedor-modal">
+            <button class="boton-cerrar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                </svg>
+            </button>
+            <div class="content-modal">
+                <div class="pw-content">
+                    <div class="eins-modal-preview"><img src="/img/proyecto-game-3.jpg" alt="" /></div>
+                    <div class="eins-modal-text">
+                        <p data-i18n="projectsGame-info-3-p1">Juego de ajedrez</p>
+                        <p data-i18n="projectsGame-info-3-p2">Un juego de ajedrez que te permite jugar contra otro usuario.</p>
+                        <div class="eins-modal-text-2">
+                            <span data-i18n="projects-link">Enlace:</span> <a href="https://nahuel61920.github.io/Ajedrez2.0/" target="_blank">https://nahuel61920.github.io/Ajedrez</a>
+                        </div>
+                        <div class="eins-modal-text-3">
+                            <span data-i18n="projects-tec">Tecnologías Utilizadas:</span>
+                            <div class="eins-modal-tec">
+                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="HTML" />
+                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="CSS" />
+                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg" alt="JS" />
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-plain-wordmark.svg" alt="jQuery" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div id="modal-game-2" class="overlay">
+        <div class="contenedor-modal">
+            <button class="boton-cerrar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                </svg>
+            </button>
+            <div class="content-modal">
+                <div class="pw-content">
+                    <div class="eins-modal-preview"><img src="/img/proyecto-game-2.jpg" alt="" /></div>
+                    <div class="eins-modal-text">
+                        <p data-i18n="projectsGame-info-2-p1">Juego de la serpiente</p>
+                        <p data-i18n="projectsGame-info-2-p2">Inspirado en el clásico juego arcade de los 90.</p>
+                        <div class="eins-modal-text-2">
+                            <span data-i18n="projects-link">Enlace:</span> <a href="https://nahuel61920.github.io/Juego-de-la-Serpiente/" target="_blank">https://nahuel61920.github.io/Juego-de-la-Serpiente/</a>
+                        </div>
+                        <div class="eins-modal-text-3">
+                            <span data-i18n="projects-tec">Tecnologías Utilizadas:</span>
+                            <div class="eins-modal-tec">
+                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="HTML" />
+                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="CSS" />
+                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg" alt="JS" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 1 -->
+    <div id="modal-game-1" class="overlay">
+        <div class="contenedor-modal">
+            <button class="boton-cerrar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                </svg>
+            </button>
+            <div class="content-modal">
+                <div class="pw-content">
+                    <div class="eins-modal-preview"><img src="/img/proyecto-game-1.jpg" alt="" /></div>
+                    <div class="eins-modal-text">
+                        <p data-i18n="projectsGame-info-1-p1">Preguntas y respuestas</p>
+                        <p data-i18n="projectsGame-info-1-p2">Cuenta con más de 400 preguntas con múltiples opciones para responder.</p>
+                        <div class="eins-modal-text-2">
+                            <span data-i18n="projects-link">Enlace:</span> <a href="https://nahuel61920.github.io/Preguntas-y-Respuestas/" target="_blank">https://nahuel61920.github.io/Preguntas-y-Respuestas/</a>
+                        </div>
+                        <div class="eins-modal-text-3">
+                            <span data-i18n="projects-tec">Tecnologías Utilizadas:</span>
+                            <div class="eins-modal-tec">
+                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="HTML" />
+                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="CSS" />
+                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg" alt="JS" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <ScrollToTop />
+    
+    <Footer />
+</Layout>
+
+<script>
+    // Handle modal show/hide
+    document.addEventListener("DOMContentLoaded", () => {
+        const triggers = document.querySelectorAll(".project-trigger");
+        const closeBtns = document.querySelectorAll(".boton-cerrar");
+        const overlays = document.querySelectorAll(".overlay");
+
+        triggers.forEach(trigger => {
+            trigger.addEventListener("click", (e) => {
+                e.preventDefault();
+                const modalId = trigger.getAttribute("data-modal");
+                if (modalId) {
+                    const modal = document.getElementById(modalId);
+                    modal?.classList.add("active");
+                }
+            });
+        });
+
+        closeBtns.forEach(btn => {
+            btn.addEventListener("click", () => {
+                const modal = btn.closest(".overlay");
+                modal?.classList.remove("active");
+            });
+        });
+
+        overlays.forEach(overlay => {
+            overlay.addEventListener("click", (e) => {
+                if (e.target === overlay) {
+                    overlay.classList.remove("active");
+                }
+            });
+        });
+    });
+</script>

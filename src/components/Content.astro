@@ -1,0 +1,138 @@
+---
+import "../styles/Content.css";
+---
+
+<div class="contenido">
+    <!-- tsParticles Container -->
+    <div id="tsparticles" class="particles-2-css"></div>
+
+    <section class="inicio" id="inicio">
+        <div class="titulo">
+            <p data-aos="fade-up" data-aos-delay="600" data-i18n="greeting">Hola</p>
+            <h1 data-aos="fade-up" data-aos-delay="800" data-i18n="name">Soy Nahuel Carrizo</h1>
+            <p data-aos="fade-up" data-aos-delay="1000" data-i18n="rol">Full-stack developer</p>
+
+            <div class="redes-sociales">
+                <a href="https://www.linkedin.com/in/esteban-nahuel-carrizo-69715422b/" target="_blank" rel="noopener noreferrer" data-aos="fade-up" data-aos-delay="1200"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/Nahuel61920/" target="_blank" rel="noopener noreferrer" data-aos="fade-up" data-aos-delay="1400"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/nahuelcarrizolc/" target="_blank" rel="noopener noreferrer" data-aos="fade-up" data-aos-delay="1600"><i class="fab fa-instagram"></i></a>
+                <a href="https://api.whatsapp.com/send?phone=5493815360966" target="_blank" rel="noopener noreferrer" data-aos="fade-up" data-aos-delay="1800"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            
+            <div class="wrapper">
+                <a class="button" href="https://www.linkedin.com/in/esteban-nahuel-carrizo-69715422b/" target="_blank" rel="noopener noreferrer" data-aos="fade-up" data-aos-delay="1200">
+                    <div class="icon">
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+                    <span>Linkedin</span>
+                </a>
+                <a class="button" href="https://github.com/Nahuel61920/" target="_blank" rel="noopener noreferrer" data-aos="fade-up" data-aos-delay="1400">
+                    <div class="icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <span>Github</span>
+                </a>
+                <a class="button" href="https://www.instagram.com/nahuelcarrizolc/" target="_blank" rel="noopener noreferrer" data-aos="fade-up" data-aos-delay="1600">
+                    <div class="icon">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <span>Instagram</span>
+                </a>
+                <a class="button" href="https://api.whatsapp.com/send?phone=5493815360966" target="_blank" rel="noopener noreferrer" data-aos="fade-up" data-aos-delay="1800">
+                    <div class="icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <span>Whatsapp</span>
+                </a>
+            </div>
+
+            <a href="#sobre-mi">
+                <div class="scroll-down"></div>
+            </a>
+        </div>
+    </section>
+</div>
+
+<script>
+    function initHeaderParticles() {
+        // @ts-ignore
+        if (typeof tsParticles !== 'undefined') {
+            // @ts-ignore
+            tsParticles.load("tsparticles", {
+                background: {
+                    position: "50% 50%",
+                    repeat: "no-repeat",
+                    size: "cover",
+                    color: "transparent"
+                },
+                fullScreen: {
+                    enable: false
+                },
+                particles: {
+                    color: {
+                        value: "#ffffff",
+                    },
+                    links: {
+                        color: {
+                            value: "#000",
+                        },
+                        distance: 150,
+                        enable: false,
+                        opacity: 0.4,
+                    },
+                    move: {
+                        enable: true,
+                        speed: 2,
+                        direction: "none",
+                        random: false,
+                        straight: false,
+                        outModes: {
+                            bottom: "out",
+                            left: "out",
+                            right: "out",
+                            top: "out",
+                        },
+                    },
+                    number: {
+                        value: 20,
+                    },
+                    opacity: {
+                        random: {
+                            enable: true,
+                        },
+                        value: {
+                            min: 0.1,
+                            max: 0.8,
+                        },
+                    },
+                    shape: {
+                        options: {
+                            image: [
+                                { src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg", width: 20, height: 20 },
+                                { src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg", width: 20, height: 20 },
+                                { src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg", width: 20, height: 20 },
+                                { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-plain-wordmark.svg", width: 20, height: 20 },
+                                { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", width: 20, height: 20 },
+                                { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg", width: 20, height: 20 },
+                                { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg", width: 20, height: 20 },
+                                { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-plain-wordmark.svg", width: 20, height: 20 },
+                                { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg", width: 20, height: 20 },
+                                { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg", width: 20, height: 20 },
+                                { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg", width: 20, height: 20 },
+                                { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg", width: 20, height: 20 },
+                                { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg", width: 20, height: 20 }
+                            ]
+                        },
+                        type: "image",
+                    },
+                    size: {
+                        value: 30,
+                    }
+                },
+                retina_detect: true
+            });
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', initHeaderParticles);
+</script>
