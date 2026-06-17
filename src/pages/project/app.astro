@@ -7,7 +7,7 @@ import Footer from '../../components/Footer.astro';
 import '../../../src/styles/ProjectPage.css';
 ---
 
-<Layout title="Proyectos Apps =(Nahuel61920)=>">
+<Layout title="Proyectos Apps & Herramientas =(ANONIMO432HZ)=>">
     <Header isHomePage={false} />
     
     <ParticleBackground />
@@ -17,16 +17,14 @@ import '../../../src/styles/ProjectPage.css';
             <h1 class="heading" data-i18n="projects">Proyectos</h1>
             <nav class="navbar nav-proj">
                 <a href="/project" data-i18n="site-web">Páginas web</a>
-                <a href="/project/app" class="active">Apps</a>
-                <a href="/project/game" data-i18n="games">juegos</a>
+                <a href="/project/app" class="active">Apps & Herramientas</a>
             </nav>
         </section>
 
         <!-- Projects Grid -->
         <section class="projects__grid apps">
-            {Array.from({ length: 18 }, (_, i) => 18 - i).map((num) => {
-                const isPng = num === 18 || num === 17;
-                const extension = isPng ? 'png' : 'jpg';
+            {[18, 17, 10].map((num) => {
+                const extension = num === 10 ? 'jpg' : 'png';
                 return (
                     <div class="projects__item">
                         <a href="#" class="project-trigger" data-modal={`modal-app-${num}`}>
@@ -51,11 +49,11 @@ import '../../../src/styles/ProjectPage.css';
                 <div class="pw-content">
                     <div class="eins-modal-preview"><img src="/img/proyecto-app-18-com.png" alt="" /></div>
                     <div class="eins-modal-text">
-                        <p>CoinPlus</p>
+                        <p>DevSuite</p>
                         <p data-i18n="projectsApp-info-18-p1">Una aplicación que ofrece servicios de intercambio para todas las criptomonedas de la red Ethereum. Puedes convertir dólares en criptomonedas, cambiar a otras y venderlas para cobrarlas en dólares.</p>
                         <p data-i18n="projectsApp-info-18-p2">La aplicación cuenta con un sistema de autenticación, para que el usuario pueda acceder a su cuenta y realizar las operaciones que desee, tambien cuenta un apartado donde se puede ver la evolución de las diferentes criptomonedas.</p>
                         <div class="eins-modal-text-2">
-                            <span data-i18n="projects-link">Enlace:</span> <a href="https://coin-plus.vercel.app/" target="_blank">https://coin-plus.vercel.app/</a>
+                            <span data-i18n="projects-link">Enlace:</span> <a href="https://dev-suite.vercel.app/" target="_blank">https://dev-suite.vercel.app/</a>
                         </div>
                         <div class="eins-modal-text-3">
                             <span data-i18n="projects-tec">Tecnologías Utilizadas:</span>
@@ -66,7 +64,6 @@ import '../../../src/styles/ProjectPage.css';
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="" />
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="" />
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="" />
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/solidity/solidity-original.svg" alt="" />
                             </div>
                         </div>
                     </div>
@@ -87,208 +84,15 @@ import '../../../src/styles/ProjectPage.css';
                 <div class="pw-content">
                     <div class="eins-modal-preview"><img src="/img/proyecto-app-17-com.png" alt="" /></div>
                     <div class="eins-modal-text">
-                        <p>PI Dogs</p>
+                        <p>ChromiumSpecter</p>
                         <p data-i18n="projectsApp-info-17-p2">Este proyecto consistió en el desarrollo de una SPA (Single Page Application) la cual se desarrolla con el estilo de neumorfismo, hace uso de una API de datos (The Dog API), y luego parte de la información es extraída y almacenada en una Base de Datos, (PostgreSQL) para que pueda ser utilizado posteriormente a conveniencia.</p>
                         <div class="eins-modal-text-2">
-                            <span data-i18n="projects-link">Enlace:</span> <a href="https://pi-dogs-main-ashy.vercel.app/" target="_blank">https://pi-dogs-main-ashy.vercel.app/</a>
+                            <span data-i18n="projects-link">Enlace:</span> <a href="https://github.com/ANONIMO432HZ/ChromiumSpecter" target="_blank">https://github.com/ANONIMO432HZ/ChromiumSpecter</a>
                         </div>
                         <div class="eins-modal-text-3">
                             <span data-i18n="projects-tec">Tecnologías Utilizadas:</span>
                             <div class="eins-modal-tec">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="" />
-                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="" />
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" alt="" />
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="" />
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sequelize/sequelize-original.svg" alt="" />
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal 16 -->
-    <div id="modal-app-16" class="overlay">
-        <div class="contenedor-modal">
-            <button class="boton-cerrar">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
-                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
-                </svg>
-            </button>
-            <div class="content-modal">
-                <div class="pw-content">
-                    <div class="eins-modal-preview"><img src="/img/proyecto-app-16.jpg" alt="" /></div>
-                    <div class="eins-modal-text">
-                        <p>Weather App</p>
-                        <p data-i18n="projectsApp-info-16-p2">Te permite buscar el clima de la ciudad que elijas, puedes borrar la ciudad que buscaste y también ver más detalles de la ciudad.</p>
-                        <div class="eins-modal-text-2">
-                            <span data-i18n="projects-link">Enlace:</span> <a href="https://github.com/Nahuel61920/Weather-App-React" target="_blank">Repository</a>
-                        </div>
-                        <div class="eins-modal-text-3">
-                            <span data-i18n="projects-tec">Tecnologías Utilizadas:</span>
-                            <div class="eins-modal-tec">
-                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="" />
-                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="" />
-                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg" alt="" />
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal 15 -->
-    <div id="modal-app-15" class="overlay">
-        <div class="contenedor-modal">
-            <button class="boton-cerrar">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
-                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
-                </svg>
-            </button>
-            <div class="content-modal">
-                <div class="pw-content">
-                    <div class="eins-modal-preview"><img src="/img/proyecto-app-15.jpg" alt="" /></div>
-                    <div class="eins-modal-text">
-                        <p>Stickers App</p>
-                        <p data-i18n="projectsApp-info-15-p2">La app extrae datos de la API giphy, para buscar los stickers que quiere el usuario</p>
-                        <div class="eins-modal-text-2">
-                            <span data-i18n="projects-link">Enlace:</span> <a href="https://nahuel61920.github.io/Stickers-App/" target="_blank">Demo</a>
-                        </div>
-                        <div class="eins-modal-text-3">
-                            <span data-i18n="projects-tec">Tecnologías Utilizadas:</span>
-                            <div class="eins-modal-tec">
-                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="" />
-                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="" />
-                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg" alt="" />
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal 14 -->
-    <div id="modal-app-14" class="overlay">
-        <div class="contenedor-modal">
-            <button class="boton-cerrar">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
-                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
-                </svg>
-            </button>
-            <div class="content-modal">
-                <div class="pw-content">
-                    <div class="eins-modal-preview"><img src="/img/proyecto-app-14.jpg" alt="" /></div>
-                    <div class="eins-modal-text">
-                        <p>Music player</p>
-                        <p data-i18n="projectsApp-info-14-p2">Pequeño reproductor de música creado con javascript, te permite reproducir, pausar, avanzar rápido y saltar las canciones.</p>
-                        <div class="eins-modal-text-2">
-                            <span data-i18n="projects-link">Enlace:</span> <a href="https://nahuel61920.github.io/Music-player/" target="_blank">Demo</a>
-                        </div>
-                        <div class="eins-modal-text-3">
-                            <span data-i18n="projects-tec">Tecnologías Utilizadas:</span>
-                            <div class="eins-modal-tec">
-                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="" />
-                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="" />
-                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg" alt="" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal 13 -->
-    <div id="modal-app-13" class="overlay">
-        <div class="contenedor-modal">
-            <button class="boton-cerrar">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
-                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
-                </svg>
-            </button>
-            <div class="content-modal">
-                <div class="pw-content">
-                    <div class="eins-modal-preview"><img src="/img/proyecto-app-13.jpg" alt="" /></div>
-                    <div class="eins-modal-text">
-                        <p>GitHub-User</p>
-                        <p data-i18n="projectsApp-info-13-p2">Buscador de usuarios de GitHub, le permite mostrar toda la información del usuario que está buscando, como Últimos repositorios, estrellas, seguidores y seguidos.</p>
-                        <div class="eins-modal-text-2">
-                            <span data-i18n="projects-link">Enlace:</span> <a href="https://nahuel61920.github.io/GitHub-User-Finder/" target="_blank">Demo</a>
-                        </div>
-                        <div class="eins-modal-text-3">
-                            <span data-i18n="projects-tec">Tecnologías Utilizadas:</span>
-                            <div class="eins-modal-tec">
-                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="" />
-                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="" />
-                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg" alt="" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal 12 -->
-    <div id="modal-app-12" class="overlay">
-        <div class="contenedor-modal">
-            <button class="boton-cerrar">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
-                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
-                </svg>
-            </button>
-            <div class="content-modal">
-                <div class="pw-content">
-                    <div class="eins-modal-preview"><img src="/img/proyecto-app-12.jpg" alt="" /></div>
-                    <div class="eins-modal-text">
-                        <p>My paint</p>
-                        <p data-i18n="projectsApp-info-12-p2">Un pequeño paint que nos permite dibujar, cambiar colores, editar el grosor de la línea y borrar el dibujo realizado</p>
-                        <div class="eins-modal-text-2">
-                            <span data-i18n="projects-link">Enlace:</span> <a href="https://nahuel61920.github.io/Paint/" target="_blank">Demo</a>
-                        </div>
-                        <div class="eins-modal-text-3">
-                            <span data-i18n="projects-tec">Tecnologías Utilizadas:</span>
-                            <div class="eins-modal-tec">
-                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="" />
-                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="" />
-                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg" alt="" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal 11 -->
-    <div id="modal-app-11" class="overlay">
-        <div class="contenedor-modal">
-            <button class="boton-cerrar">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
-                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
-                </svg>
-            </button>
-            <div class="content-modal">
-                <div class="pw-content">
-                    <div class="eins-modal-preview"><img src="/img/proyecto-app-11.jpg" alt="" /></div>
-                    <div class="eins-modal-text">
-                        <p>Pokedex</p>
-                        <p data-i18n="projectsApp-info-11-p2">Una pokedex creada con la API de pokemon, devuelve todos los pokemon con sus respectivas estadísticas, incluye una paginación cada 9 pokemon.</p>
-                        <div class="eins-modal-text-2">
-                            <span data-i18n="projects-link">Enlace:</span> <a href="https://nahuel61920.github.io/Pokedex/" target="_blank">Demo</a>
-                        </div>
-                        <div class="eins-modal-text-3">
-                            <span data-i18n="projects-tec">Tecnologías Utilizadas:</span>
-                            <div class="eins-modal-tec">
-                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="" />
-                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="" />
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="" />
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="" />
                                 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg" alt="" />
                             </div>
                         </div>
@@ -310,300 +114,16 @@ import '../../../src/styles/ProjectPage.css';
                 <div class="pw-content">
                     <div class="eins-modal-preview"><img src="/img/proyecto-app-10.jpg" alt="" /></div>
                     <div class="eins-modal-text">
-                        <p data-i18n="projectsApp-info-10-p1">Administrador de clientes</p>
+                        <p data-i18n="projectsApp-info-10-p1">WinTools</p>
                         <p data-i18n="projectsApp-info-10-p2">Te autoriza a sacar un turno para reparar tu celular, puedes editar el turno si lo deseas.</p>
                         <div class="eins-modal-text-2">
-                            <span data-i18n="projects-link">Enlace:</span> <a href="https://nahuel61920.github.io/Administrador-de-Clientes/" target="_blank">Demo</a>
+                            <span data-i18n="projects-link">Enlace:</span> <a href="https://github.com/ANONIMO432HZ/WinTools" target="_blank">https://github.com/ANONIMO432HZ/WinTools</a>
                         </div>
                         <div class="eins-modal-text-3">
                             <span data-i18n="projects-tec">Tecnologías Utilizadas:</span>
                             <div class="eins-modal-tec">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="" />
                                 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="" />
-                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="" />
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="" />
-                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg" alt="" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal 9 -->
-    <div id="modal-app-9" class="overlay">
-        <div class="contenedor-modal">
-            <button class="boton-cerrar">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
-                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
-                </svg>
-            </button>
-            <div class="content-modal">
-                <div class="pw-content">
-                    <div class="eins-modal-preview"><img src="/img/proyecto-app-9.jpg" alt="" /></div>
-                    <div class="eins-modal-text">
-                        <p data-i18n="projectsApp-info-9-p1">Pomodoro app</p>
-                        <p data-i18n="projectsApp-info-9-p2">Te permite agregar una tarea para completarla en 25 minutos y al finalizar descansar 5 minutos.</p>
-                        <div class="eins-modal-text-2">
-                            <span data-i18n="projects-link">Enlace:</span> <a href="https://nahuel61920.github.io/Pomodoro/" target="_blank">Demo</a>
-                        </div>
-                        <div class="eins-modal-text-3">
-                            <span data-i18n="projects-tec">Tecnologías Utilizadas:</span>
-                            <div class="eins-modal-tec">
-                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="" />
-                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="" />
-                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg" alt="" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal 8 -->
-    <div id="modal-app-8" class="overlay">
-        <div class="contenedor-modal">
-            <button class="boton-cerrar">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
-                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
-                </svg>
-            </button>
-            <div class="content-modal">
-                <div class="pw-content">
-                    <div class="eins-modal-preview"><img src="/img/proyecto-app-8.jpg" alt="" /></div>
-                    <div class="eins-modal-text">
-                        <p data-i18n="projectsApp-info-8-p1">Gastos semanales</p>
-                        <p data-i18n="projectsApp-info-8-p2">Puedes calcular los gastos que vas a realizar en la semana, teniendo un presupuesto que elijas.</p>
-                        <div class="eins-modal-text-2">
-                            <span data-i18n="projects-link">Enlace:</span> <a href="https://nahuel61920.github.io/Gastos-semanales/" target="_blank">Demo</a>
-                        </div>
-                        <div class="eins-modal-text-3">
-                            <span data-i18n="projects-tec">Tecnologías Utilizadas:</span>
-                            <div class="eins-modal-tec">
-                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="" />
-                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="" />
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="" />
-                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg" alt="" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal 7 -->
-    <div id="modal-app-7" class="overlay">
-        <div class="contenedor-modal">
-            <button class="boton-cerrar">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
-                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
-                </svg>
-            </button>
-            <div class="content-modal">
-                <div class="pw-content">
-                    <div class="eins-modal-preview"><img src="/img/proyecto-app-7.jpg" alt="" /></div>
-                    <div class="eins-modal-text">
-                        <p data-i18n="projectsApp-info-7-p1">Cotizar seguro</p>
-                        <p data-i18n="projectsApp-info-7-p2">Te permite calcular el seguro de tu automóvil, dependiendo del año y del seguro que elijas.</p>
-                        <div class="eins-modal-text-2">
-                            <span data-i18n="projects-link">Enlace:</span> <a href="https://nahuel61920.github.io/Cotizador-de-seguros/" target="_blank">Demo</a>
-                        </div>
-                        <div class="eins-modal-text-3">
-                            <span data-i18n="projects-tec">Tecnologías Utilizadas:</span>
-                            <div class="eins-modal-tec">
-                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="" />
-                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="" />
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" alt="" />
-                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg" alt="" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal 6 -->
-    <div id="modal-app-6" class="overlay">
-        <div class="contenedor-modal">
-            <button class="boton-cerrar">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
-                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
-                </svg>
-            </button>
-            <div class="content-modal">
-                <div class="pw-content">
-                    <div class="eins-modal-preview"><img src="/img/proyecto-app-6.jpg" alt="" /></div>
-                    <div class="eins-modal-text">
-                        <p data-i18n="projectsApp-info-6-p1">Carrito de cursos</p>
-                        <p data-i18n="projectsApp-info-6-p2">Te permite agregar un curso al carrito, junto con su descripción y valor.</p>
-                        <div class="eins-modal-text-2">
-                            <span data-i18n="projects-link">Enlace:</span> <a href="https://nahuel61920.github.io/Carrito-Cursos/" target="_blank">Demo</a>
-                        </div>
-                        <div class="eins-modal-text-3">
-                            <span data-i18n="projects-tec">Tecnologías Utilizadas:</span>
-                            <div class="eins-modal-tec">
-                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="" />
-                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="" />
-                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg" alt="" />
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-plain-wordmark.svg" alt="" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal 5 -->
-    <div id="modal-app-5" class="overlay">
-        <div class="contenedor-modal">
-            <button class="boton-cerrar">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
-                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
-                </svg>
-            </button>
-            <div class="content-modal">
-                <div class="pw-content">
-                    <div class="eins-modal-preview"><img src="/img/proyecto-app-5.jpg" alt="" /></div>
-                    <div class="eins-modal-text">
-                        <p data-i18n="projectsApp-info-5-p1">Generador de tweets</p>
-                        <p data-i18n="projectsApp-info-5-p2">Podes crear tweets y eliminarlos a voluntad.</p>
-                        <div class="eins-modal-text-2">
-                            <span data-i18n="projects-link">Enlace:</span> <a href="https://nahuel61920.github.io/Tweets/" target="_blank">Demo</a>
-                        </div>
-                        <div class="eins-modal-text-3">
-                            <span data-i18n="projects-tec">Tecnologías Utilizadas:</span>
-                            <div class="eins-modal-tec">
-                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="" />
-                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="" />
-                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg" alt="" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal 4 -->
-    <div id="modal-app-4" class="overlay">
-        <div class="contenedor-modal">
-            <button class="boton-cerrar">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
-                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
-                </svg>
-            </button>
-            <div class="content-modal">
-                <div class="pw-content">
-                    <div class="eins-modal-preview"><img src="/img/proyecto-app-4.jpg" alt="" /></div>
-                    <div class="eins-modal-text">
-                        <p data-i18n="projectsApp-info-4-p1">Buscador de autos</p>
-                        <p data-i18n="projectsApp-info-4-p2">Te permite filtrar autos ya sea, por su marca, año, precio, puertas, transmisión y color.</p>
-                        <div class="eins-modal-text-2">
-                            <span data-i18n="projects-link">Enlace:</span> <a href="https://nahuel61920.github.io/Buscador-de-autos" target="_blank">Demo</a>
-                        </div>
-                        <div class="eins-modal-text-3">
-                            <span data-i18n="projects-tec">Tecnologías Utilizadas:</span>
-                            <div class="eins-modal-tec">
-                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="" />
-                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="" />
-                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg" alt="" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal 3 -->
-    <div id="modal-app-3" class="overlay">
-        <div class="contenedor-modal">
-            <button class="boton-cerrar">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
-                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
-                </svg>
-            </button>
-            <div class="content-modal">
-                <div class="pw-content">
-                    <div class="eins-modal-preview"><img src="/img/proyecto-app-3.jpg" alt="" /></div>
-                    <div class="eins-modal-text">
-                        <p data-i18n="projectsApp-info-3-p1">Agujas en la miel formulario</p>
-                        <p data-i18n="projectsApp-info-3-p2">Formulario estilo clásico, que te permite ordenar un libro.</p>
-                        <div class="eins-modal-text-2">
-                            <span data-i18n="projects-link">Enlace:</span> <a href="https://nahuel61920.github.io/FormularioJs-Clasico/" target="_blank">Demo</a>
-                        </div>
-                        <div class="eins-modal-text-3">
-                            <span data-i18n="projects-tec">Tecnologías Utilizadas:</span>
-                            <div class="eins-modal-tec">
-                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="" />
-                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="" />
-                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg" alt="" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal 2 -->
-    <div id="modal-app-2" class="overlay">
-        <div class="contenedor-modal">
-            <button class="boton-cerrar">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
-                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
-                </svg>
-            </button>
-            <div class="content-modal">
-                <div class="pw-content">
-                    <div class="eins-modal-preview"><img src="/img/proyecto-app-2.jpg" alt="" /></div>
-                    <div class="eins-modal-text">
-                        <p data-i18n="projectsApp-info-2-p1">To-do list App</p>
-                        <p data-i18n="projectsApp-info-2-p2">Te permite añadir tareas, márcalas como completadas y ordenarlas de pendientes a completas.</p>
-                        <div class="eins-modal-text-2">
-                            <span data-i18n="projects-link">Enlace:</span> <a href="https://nahuel61920.github.io/To-do-list/" target="_blank">Demo</a>
-                        </div>
-                        <div class="eins-modal-text-3">
-                            <span data-i18n="projects-tec">Tecnologías Utilizadas:</span>
-                            <div class="eins-modal-tec">
-                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="" />
-                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="" />
-                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg" alt="" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal 1 -->
-    <div id="modal-app-1" class="overlay">
-        <div class="contenedor-modal">
-            <button class="boton-cerrar">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
-                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
-                </svg>
-            </button>
-            <div class="content-modal">
-                <div class="pw-content">
-                    <div class="eins-modal-preview"><img src="/img/proyecto-app-1.jpg" alt="" /></div>
-                    <div class="eins-modal-text">
-                        <p data-i18n="projectsApp-info-1-p1">Calcular gastos de viaje</p>
-                        <p data-i18n="projectsApp-info-1-p2">Calculadora que te permite presupuestar lo que vas a gastar en un viaje al destino que le indiques.</p>
-                        <div class="eins-modal-text-2">
-                            <span data-i18n="projects-link">Enlace:</span> <a href="https://nahuel61920.github.io/Calcular-gastos-de-viaje/" target="_blank">Demo</a>
-                        </div>
-                        <div class="eins-modal-text-3">
-                            <span data-i18n="projects-tec">Tecnologías Utilizadas:</span>
-                            <div class="eins-modal-tec">
-                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="" />
-                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="" />
-                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg" alt="" />
                             </div>
                         </div>
                     </div>

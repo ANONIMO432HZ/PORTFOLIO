@@ -1,2 +1,117 @@
-"---\nimport Layout from '../layouts/Layout.astro';\nimport Header from '../components/Header.astro';\nimport ParticleBackground from '../components/ParticleBackground.astro';\nimport ScrollToTop from '../components/ScrollToTop.astro';\nimport Footer from '../components/Footer.astro';\nimport '../../src/styles/AboutPage.css';\n---\n\n<Layout title=\"Sobre mi =(Nahuel61920)=>\">\n    <Header isHomePage={false} />\n    \n    <ParticleBackground />\n\n    <main>\n        <section class=\"sobre-mi-seccion\" id=\"sobre-mi\">\n            <div class=\"sobre-mi-container\">\n                <div class=\"sobre-mi-img-container\">\n                    <img src=\"/img/home.jpg\" alt=\"Nahuel Carrizo\" class=\"sobre-mi-img\" />\n                    \n                    <a href=\"/cv.pdf\" target=\"_blank\" rel=\"noopener noreferrer\" download=\"cv.pdf\" class=\"btn-codigo cv buttonDownload\" data-i18n=\"btn-cv\">\n                        Descargar CV\n                    </a>\n                </div>\n                <div class=\"sobre-mi-info\">\n                    <p data-i18n=\"about-info-1\">\n                        Hola soy Esteban Nahuel Carrizo, estudiante de la Universidad Tecnológica de Tucumán; Me considero una persona apasionada por la programación y el desarrollo web dado que en 2020 tuve la oportunidad conocer este mundo del front-end y pude crear mi primera página web solo usando HTML y CSS desde allí, sentí una gran pasión por el desarrollo web, ya que puedes hacer cosas impresionante sabiendo cómo usar HTML, CSS, JavaScript y hasta el día de hoy sigo sintiendo esa misma pasión cuando creo una página web.\n                    </p>\n\n                    <div class=\"hide parrafo-active\">\n                        <p data-i18n=\"about-info-2\">\n                            Me considero una persona autodidacta dado que me gusta estar en constante aprendizaje día a día, tanto como de nuevas tecnologías, como de nuevos métodos de desarrollo que me ayuden a pulir y elevar mi nivel de aprendizaje.\
-<truncated 7907 bytes>
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import ParticleBackground from '../components/ParticleBackground.astro';
+import ScrollToTop from '../components/ScrollToTop.astro';
+import Footer from '../components/Footer.astro';
+import '../../src/styles/AboutPage.css';
+---
+
+<Layout title="Sobre mi =(Nahuel61920)=>">
+    <Header isHomePage={false} />
+    
+    <ParticleBackground />
+
+    <main>
+        <section class="sobre-mi-seccion" id="sobre-mi">
+            <div class="sobre-mi-container">
+                <div class="sobre-mi-img-container">
+                    <img src="/img/home.jpg" alt="ANONIMO432HZ" class="sobre-mi-img" />
+                </div>
+                <div class="sobre-mi-info">
+                    <p data-i18n="about-info-1">
+                        Hola soy Esteban Nahuel Carrizo, estudiante de la Universidad Tecnológica de Tucumán; Me considero una persona apasionada por la programación y el desarrollo web dado que en 2020 tuve la oportunidad conocer este mundo del front-end y pude crear mi primera página web solo usando HTML y CSS desde allí, sentí una gran pasión por el desarrollo web, ya que puedes hacer cosas impresionante sabiendo cómo usar HTML, CSS, JavaScript y hasta el día de hoy sigo sintiendo esa misma pasión cuando creo una página web.
+                    </p>
+
+                    <div class="hide parrafo-active">
+                        <p data-i18n="about-info-2">
+                            Me considero una persona autodidacta dado que me gusta estar en constante aprendizaje día a día, tanto como de nuevas tecnologías, como de nuevos métodos de desarrollo que me ayuden a pulir y elevar mi nivel de aprendizaje.
+                        </p>
+                        <p data-i18n="about-info-3">
+                            Tengo experiencia trabajando como diseñador y desarrollador web freelance, lo cual me dio la oportunidad de trabajar en bastantes proyectos interesantes, adaptándome a las necesidades y presupuesto del cliente lo que me permitió mejorar mis habilidades y conocimientos; adicionalmente también he tenido la oportunidad de formar parte de algunos cursos en línea y de manera presencial que me ayudaron a enriquecer mis capacidades y poder conocer un poco más de este hermoso mundo del desarrollo web.
+                        </p>
+                    </div>
+
+                    <div class="btn-info">
+                        <button class="btn-codigo" id="btn-mas-info" data-i18n="btn-know-more">Saber más</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills-section">
+            <h2 class="heading">Skills</h2>
+            <div class="skill-container">
+                <div class="skill-card">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" class="skills-img" alt="HTML5" />
+                    <h3 class="skill-name">HTML5</h3>
+                    <p class="skill-info" data-i18n="about-skills-1">Más de un año de experiencia profesional en este lenguaje, me permiten desempeñarme sin problemas en la industria.</p>
+                </div>
+                <div class="skill-card">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" class="skills-img" alt="CSS3" />
+                    <h3 class="skill-name">CSS3</h3>
+                    <p class="skill-info" data-i18n="about-skills-2">Más de un año de experiencia laboral en este lenguaje, lo utilizo diariamente para desarrollar diseños web e interfases.</p>
+                </div>
+                <div class="skill-card">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg" class="skills-img" alt="JavaScript" />
+                    <h3 class="skill-name">JavaScript</h3>
+                    <p class="skill-info" data-i18n="about-skills-3">Un año de experiencia usándolo en la rama del front-end y back-end, me permitieron familiarizarme con el lenguaje, e incluirlo en mis proyectos laborales.</p>
+                </div>
+                <div class="skill-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" class="skills-img" alt="Sass" />
+                    <h3 class="skill-name">Sass</h3>
+                    <p class="skill-info" data-i18n="about-skills-4">Un año usando este preprocesador en el ámbito profesional, lo incluyo en mucho de mis proyectos ya que me permite un código mejor estructurado.</p>
+                </div>
+                <div class="skill-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" class="skills-img" alt="Bootstrap" />
+                    <h3 class="skill-name">Bootstrap</h3>
+                    <p class="skill-info" data-i18n="about-skills-5">Menos de un año utilizando este framework, aun así, lo utilice en incontables proyectos laborales, que me permitieron conocerlo en su mayoría.</p>
+                </div>
+                <div class="skill-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="skills-img" alt="React" />
+                    <h3 class="skill-name">React</h3>
+                    <p class="skill-info" data-i18n="about-skills-6">Un año usando esta librería en el ámbito personal y laboral, es de las librería que más empleo y manipulo.</p>
+                </div>
+                <div class="skill-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" class="skills-img" alt="TypeScript" />
+                    <h3 class="skill-name">TypeScript</h3>
+                    <p class="skill-info" data-i18n="about-skills-7">Más de un año utilizando este framework JavaScript, realizando múltiples proyectos personales y laborales.</p>
+                </div>
+                <div class="skill-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" class="skills-img" alt="NodeJS" />
+                    <h3 class="skill-name">NodeJS</h3>
+                    <p class="skill-info" data-i18n="about-skills-8">Es el entorno de tiempo de ejecución multiplataforma que utilizo para hacer que mis aplicaciones web sean escalables.</p>
+                </div>
+                <div class="skill-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" class="skills-img" alt="Express" />
+                    <h3 class="skill-name">Express</h3>
+                    <p class="skill-info" data-i18n="about-skills-9">Es un framework que utilizo mayormente para poder administrar de la mejor manera mis APIs y mi modelo de ejecución http.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <ScrollToTop />
+
+    <Footer />
+</Layout>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const btnMasInfo = document.getElementById("btn-mas-info");
+        const parrafoActive = document.querySelector(".parrafo-active");
+
+        if (btnMasInfo && parrafoActive) {
+            btnMasInfo.addEventListener("click", () => {
+                if (parrafoActive.classList.contains("hide")) {
+                    parrafoActive.classList.remove("hide");
+                    parrafoActive.classList.add("show");
+                } else {
+                    parrafoActive.classList.remove("show");
+                    parrafoActive.classList.add("hide");
+                }
+            });
+        }
+    });
+</script>
