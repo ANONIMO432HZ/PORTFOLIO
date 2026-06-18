@@ -314,7 +314,7 @@ import ButtonGet from "./ButtonGet.astro";
     // Global Event Delegation for Modals to handle dynamically generated Swiper clones
     document.addEventListener('click', (e) => {
         const target = e.target;
-        if (!target) return;
+        if (!(target instanceof HTMLElement)) return;
         
         // Check if user clicked on a project image trigger
         const trigger = target.closest('.project-trigger');
