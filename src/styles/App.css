@@ -51,6 +51,8 @@ main,
 
 .loader {
 	position: relative;
+	color: blue;
+	
 }
 
 .loader span {

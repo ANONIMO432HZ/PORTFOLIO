@@ -281,6 +281,14 @@
 	font-size: 1.7rem;
 	font-weight: bold;
 	color: var(--black);
+	word-break: break-all;
+	overflow-wrap: break-word;
+}
+
+.eins-modal-text-2 a,
+.eins-modal-text-3 a {
+	word-break: break-all;
+	overflow-wrap: break-word;
 }
 
 /********************** Media Q **********************/

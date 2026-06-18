@@ -30,9 +30,12 @@
 	font-size: 4.5rem;
 	color: var(--green);
 }
-
+/* Centered button wrapper */
 .wrapper {
-	margin: 2rem;
+	margin: 2rem auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .wrapper .button {
 	display: flex;
@@ -40,7 +43,6 @@
 	justify-content: flex-start;
 	height: 60px;
 	width: 60px;
-	float: left;
 	margin: 0 2rem;
 	overflow: hidden;
 	color: #000;
@@ -235,6 +237,7 @@ body.light .inicio .titulo p {
 body.light .inicio .titulo h1 {
 	background: linear-gradient(135deg, #0f766e 0%, #15b8ca 100%);
 	-webkit-background-clip: text;
+	background-clip: text;
 	-webkit-text-fill-color: transparent;
 	text-shadow: none;
 }

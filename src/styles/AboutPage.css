@@ -221,8 +221,8 @@ section .row .col-skill h4 {
 	position: relative;
 	display: flex;
 	justify-content: center;
-	align-items: flex-end;
-	-webkit-align-items: flex-end;
+	align-items: center;
+	-webkit-align-items: center;
 }
 
 .sobre-mi-info p {
@@ -239,9 +239,10 @@ section .row .col-skill h4 {
 
 .sobre-mi-img {
 	width: 100%;
-	height: 100%;
+	height: auto;
+	max-width: 100%;
 	object-fit: cover;
-	object-position: right;
+	object-position: center;
 	border-radius: 2rem;
 }
 

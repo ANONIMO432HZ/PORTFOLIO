@@ -296,3 +296,87 @@ body.dark .github-header-link {
 		width: 25%;
 	}
 }
+
+/* ==========================================================================
+   💻 + ☕ = </> Formula Logo
+   ========================================================================== */
+.dev-formula {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 12px;
+	font-size: 15px;
+	font-weight: 400;
+	color: var(--text-muted);
+}
+
+.formula-icon {
+	width: 26px;
+	height: 26px;
+	color: rgb(6, 51, 255);
+	opacity: 0.85;
+}
+
+/* Force coffee steam to flow outside mug boundaries */
+.mug-icon {
+	overflow: visible;
+	color: red;
+}
+
+.dev-formula .steam {
+	transform-origin: bottom center;
+	transform-box: fill-box;
+}
+
+/* Steam animation (Left - Short) */
+.dev-formula .steam-left {
+	animation: steamShort 2.2s ease-in-out infinite;
+	animation-delay: 0s;
+	color: rgba(255, 255, 255, 0.7);
+}
+
+/* Steam animation (Right - Tall) */
+.dev-formula .steam-right {
+	animation: steamTall 2.8s ease-in-out infinite;
+	animation-delay: 1.1s;
+	color: rgba(255, 255, 255, 0.55);
+}
+
+@keyframes steamShort {
+	0% { transform: translateY(1px) translateX(0px); opacity: 0; }
+	15% { opacity: 0.8; }
+	50% { transform: translateY(-30px) translateX(3px); opacity: 0.5; }
+	80% { transform: translateY(-60px) translateX(-1px); opacity: 0.2; }
+	100% { transform: translateY(-90px) translateX(0px); opacity: 0; }
+}
+
+@keyframes steamTall {
+	0% { transform: translateY(0px) translateX(0px); opacity: 0; }
+	15% { opacity: 0.8; }
+	50% { transform: translateY(-50px) translateX(5px); opacity: 0.6; }
+	80% { transform: translateY(-100px) translateX(-3px); opacity: 0.3; }
+	100% { transform: translateY(-160px) translateX(1px); opacity: 0; }
+}
+
+.operator {
+	font-size: 25px;
+	font-weight: 400;
+	color: var(--text-muted);
+}
+
+/* Code Result styles */
+.site-header .logo .dev-formula .code-result {
+	font-family: 'Consolas', 'Courier New', monospace;
+	font-weight: 700;
+	font-size: 19px;
+	color: #00fa21;
+	letter-spacing: -2px;
+	text-shadow: 0 0 10px rgba(0, 250, 33, 0.8);
+	animation: codeGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes codeGlow {
+	from { text-shadow: 0 0 5px rgba(129, 140, 248, 0.3); }
+	to { text-shadow: 0 0 15px rgba(129, 140, 248, 0.8); }
+}
+
