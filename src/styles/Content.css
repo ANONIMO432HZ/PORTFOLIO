@@ -217,3 +217,42 @@
 		margin: 5rem 2rem;
 	}
 }
+
+/* ==========================================================================
+   Light Mode Overrides for Hero (Content)
+   ========================================================================== */
+
+body.light .contenido {
+	background: linear-gradient(135deg, #f0fcd6 0%, #f1fafc 50%, #e2e8f0 100%);
+	/* Let's make it a clean, premium light cyan-tinted slate gradient */
+	background: linear-gradient(135deg, #ecfeff 0%, #f8fafc 50%, #e2e8f0 100%);
+}
+
+body.light .inicio .titulo p {
+	color: #1e293b;
+}
+
+body.light .inicio .titulo h1 {
+	background: linear-gradient(135deg, #0f766e 0%, #15b8ca 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	text-shadow: none;
+}
+
+body.light .scroll-down {
+	border-color: #1e293b;
+}
+
+body.light .scroll-down::before,
+body.light .scroll-down::after {
+	border-color: #1e293b;
+}
+
+body.light .titulo .redes-sociales a {
+	color: #1e293b;
+}
+
+body.light .titulo .redes-sociales a:hover {
+	color: var(--secundario);
+}
+

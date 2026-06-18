@@ -11,6 +11,15 @@
 	align-items: center;
 	justify-content: space-between;
 	padding: 2rem 8%;
+	transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.dark .site-header {
+	background: #111111;
+}
+
+.site-header.activar {
+	box-shadow: var(--box-shadow);
 }
 
 .site-header .logo {
@@ -23,9 +32,15 @@
 	color: #000;
 }
 
+body.dark .site-header .logo span {
+	color: var(--white);
+}
+
 .navbar {
-	right: 4rem;
-	position: relative;
+	display: flex;
+	align-items: center;
+	margin-left: auto;
+	margin-right: 4rem;
 }
 
 .navbar a {
@@ -34,21 +49,11 @@
 	margin: 0 3rem 0 0;
 	color: var(--black);
 	position: relative;
+	transition: color 0.3s ease;
 }
 
-#buttons {
-	display: inline-block;
-	position: fixed;
-}
-
-#buttons img {
-	height: 2rem;
-	margin-right: 1rem;
-}
-
-.navbar img {
-	width: 30px;
-	cursor: pointer;
+body.dark .navbar a {
+	color: var(--white);
 }
 
 .navbar a::before {
@@ -78,87 +83,114 @@
 	transition: 0.4s ease-out;
 }
 
-body.light #darkMode {
-	background: #343d5b;
-	border-radius: 100px;
-	border: none;
-	position: relative;
-	cursor: pointer;
+/* Header Actions Container (Far Right) */
+.header-actions {
 	display: flex;
-	outline: none;
-	width: 60px;
-	margin-top: 0.1rem;
-	margin-bottom: 0.5rem;
+	align-items: center;
+	gap: 2rem;
 }
 
-body.light #darkMode::after {
-	content: "";
-	display: block;
-	width: 30px;
-	height: 30px;
-	position: absolute;
-	background: #f1f1f1;
-	top: 0;
-	left: 0;
-	right: unset;
-	border-radius: 100px;
-	transition: 0.3s ease all;
-	box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+/* Unified Language Dropdown select */
+.lang-selector-container {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	background: transparent;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	border-radius: 20px;
+	padding: 0.4rem 0.8rem;
+	color: var(--black);
+	transition: border-color 0.3s ease, color 0.3s ease;
 }
 
-body.dark #darkMode {
-	background: orange;
-	color: #000;
-	border-radius: 100px;
+body.dark .lang-selector-container {
+	border-color: rgba(255, 255, 255, 0.2);
+	color: var(--white);
+}
+
+.lang-selector-container:focus-within {
+	border-color: var(--green);
+}
+
+.lang-selector-container svg {
+	stroke: currentColor;
+	flex-shrink: 0;
+}
+
+.lang-selector-container select {
+	background: transparent;
 	border: none;
-	position: relative;
+	font-size: 1.3rem;
+	font-weight: 700;
+	color: inherit;
 	cursor: pointer;
-	display: flex;
 	outline: none;
-	width: 60px;
-	margin-top: 0.1rem;
-	margin-bottom: 0.5rem;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+	min-width: 4rem;
+	text-align: center;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
 }
 
-body.dark #darkMode::after {
-	content: "";
-	display: block;
-	width: 30px;
-	height: 30px;
-	position: absolute;
-	background: #f1f1f1;
-	top: 0;
-	right: 0;
-	left: unset;
-	border-radius: 100px;
-	transition: 0.3s ease all;
-	box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+.lang-selector-container select option {
+	background: var(--white);
+	color: var(--black);
 }
 
-#darkMode span {
-	width: 3rem;
-	height: 3rem;
-	line-height: 3rem;
-	display: block;
-	background: none;
-	color: #fff;
-	padding: 0 0 0 9px;
-	font-size: 1.5rem;
+body.dark .lang-selector-container select option {
+	background: #111;
+	color: var(--white);
 }
 
-#acceder-btn .btn {
-	margin-top: 0;
-}
-
-#acceder-btn i {
-	display: none;
-	font-size: 2.5rem;
-	color: var(--light-color);
+/* Theme Toggle Button */
+.theme-btn {
+	background: transparent;
+	border: none;
+	color: var(--black);
 	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.5rem;
+	transition: color 0.3s ease, transform 0.3s ease;
+	outline: none;
 }
 
-.site-header.activar {
-	box-shadow: var(--box-shadow);
+body.dark .theme-btn {
+	color: var(--white);
+}
+
+.theme-btn:hover {
+	color: var(--green);
+	transform: scale(1.15);
+}
+
+.theme-btn svg {
+	stroke: currentColor;
+}
+
+/* GitHub Icon Link */
+.github-header-link {
+	color: var(--black);
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	transition: color 0.3s ease, transform 0.3s ease;
+}
+
+body.dark .github-header-link {
+	color: var(--white);
+}
+
+.github-header-link:hover {
+	color: var(--green);
+	transform: scale(1.15);
+}
+
+.github-header-link svg {
+	fill: currentColor;
 }
 
 #menu-btn {
@@ -168,16 +200,14 @@ body.dark #darkMode::after {
 	display: none;
 }
 
+/********************** Media Q **********************/
+
 @media (max-width: 990px) {
 	.site-header {
 		padding: 2rem 4%;
 	}
-
-	body.light #darkMode::after,
-	body.dark #darkMode::after {
-		width: 28px;
-		height: 28px;
-		top: 0rem;
+	.navbar {
+		margin-right: 2rem;
 	}
 }
 
@@ -189,6 +219,10 @@ body.dark #darkMode::after {
 	#menu-btn.fa-bars {
 		padding: 7px;
 		border: 1px solid rgba(0, 0, 0, 0.1);
+	}
+
+	body.dark #menu-btn.fa-bars {
+		border-color: rgba(255, 255, 255, 0.15);
 	}
 
 	.site-header .logo {
@@ -203,14 +237,21 @@ body.dark #darkMode::after {
 		background: #fff;
 		border-top: var(--borde);
 		clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+		margin-right: 0;
+		display: block;
+		transition: 0.4s ease-out;
+	}
+
+	body.dark .site-header .navbar {
+		background: #111;
+		border-top: 1px solid rgba(255, 255, 255, 0.1);
 	}
 
 	.site-header .navbar.activar {
 		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 	}
 
-	.site-header .navbar a,
-	.site-header .navbar #buttons {
+	.site-header .navbar a {
 		display: block;
 		margin: 2rem;
 		font-size: 2rem;
@@ -228,41 +269,16 @@ body.dark #darkMode::after {
 		width: 20%;
 	}
 
-	.nav-proj .active-link::before,
-	.nav-proj a.active::before {
-		width: 100%;
+	.header-actions {
+		gap: 1.2rem;
 	}
 
-	#buttons {
-		position: relative;
+	.lang-selector-container {
+		padding: 0.3rem 0.6rem;
 	}
 
-	#buttons img {
-		position: relative;
-		margin-right: 2rem;
-		height: 2.5rem;
-	}
-
-	body.light #darkMode,
-	body.dark #darkMode {
-		width: 50px;
-		height: 22px;
-	}
-
-	body.light #darkMode::after,
-	body.dark #darkMode::after {
-		width: 22px;
-		height: 22px;
-		top: 0;
-	}
-
-	body.light #darkMode span,
-	body.dark #darkMode span {
-		width: 3rem;
-		height: 3rem;
-		line-height: 1rem;
-		padding: 4px 0 0 4px;
-		font-size: 1.5rem;
+	.lang-selector-container select {
+		font-size: 1.2rem;
 	}
 
 	.site-header {
@@ -275,31 +291,8 @@ body.dark #darkMode::after {
 		padding: 1rem 5%;
 	}
 
-	body.light #darkMode,
-	body.dark #darkMode {
-		width: 47px;
-		height: 25px;
-	}
-
-	body.light #darkMode::after,
-	body.dark #darkMode::after {
-		width: 24px;
-		height: 24px;
-		top: 0;
-	}
-
-	body.light #darkMode span,
-	body.dark #darkMode span {
-		line-height: 2.7rem;
-		padding: 2px 0 0 4px;
-	}
-
 	.navbar .active-link::before,
 	.navbar a.active::before {
 		width: 25%;
-	}
-
-	.nav-proj a.active::before {
-		width: 100%;
 	}
 }

@@ -1,49 +1,73 @@
 /********************** Footer **********************/
 
 .footer {
-	background: var(--white);
-	border-top: 3px solid #f1f1f1ee;
-	box-shadow: var(--box-shadow);
-	padding: 2rem 8%;
-}
-
-.site-footer {
+	background: #ffffff;
+	border-top: 1px solid rgba(0, 0, 0, 0.05);
+	padding: 4rem 8%;
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
+	align-items: center;
 }
 
-.site-footer .copyright {
+body.dark .footer {
+	background: #0b0909;
+	border-top: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.footer-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2rem;
+	width: 100%;
+}
+
+.footer-socials {
+	display: flex;
+	gap: 3rem;
+}
+
+.footer-socials a {
+	font-size: 2.8rem;
+	color: var(--black);
+	transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.3s ease;
+}
+
+body.dark .footer-socials a {
+	color: var(--white);
+}
+
+.footer-socials a:hover {
+	color: var(--green);
+	transform: scale(1.2) translateY(-3px);
+}
+
+.footer-info {
+	text-align: center;
+}
+
+.footer-info p {
 	font-size: 1.5rem;
-	padding: 2rem 0;
+	color: var(--light-color);
+	line-height: 1.6;
 }
 
-.redes-sociales {
-	padding: 2rem 0;
-}
-
-.redes-sociales a {
-	font-size: 3rem;
-	padding-left: 4rem;
+.footer-info p b {
 	color: var(--black);
 }
 
-.titulo .redes-sociales a {
-	padding: 2rem;
-	color: var(--green);
+body.dark .footer-info p b {
+	color: var(--white);
 }
 
 @media (max-width: 570px) {
 	.footer {
-		padding: 0.4rem 5%;
+		padding: 3rem 5%;
 	}
-
-	.site-footer .copyright p {
-		font-size: 1.2rem;
+	.footer-socials a {
+		font-size: 2.4rem;
 	}
-
-	.site-footer .redes-sociales a {
-		font-size: 2.5rem;
-		padding-left: 2rem;
-		color: var(--black);
+	.footer-info p {
+		font-size: 1.3rem;
 	}
 }
