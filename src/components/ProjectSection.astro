@@ -94,6 +94,9 @@ import ButtonGet from "./ButtonGet.astro";
             </div>
             <!-- Pagination -->
             <div class="swiper-pagination"></div>
+            <!-- Navigation arrows -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
     </div>
     
@@ -273,70 +276,74 @@ import ButtonGet from "./ButtonGet.astro";
 
 <script>
     // Initialize Swiper and Modal Handlers
-    document.addEventListener('DOMContentLoaded', () => {
+    // @ts-ignore
+    if (typeof Swiper !== 'undefined') {
         // @ts-ignore
-        if (typeof Swiper !== 'undefined') {
-            // @ts-ignore
-            new Swiper(".mySwiper", {
-                spaceBetween: 30,
-                loop: true,
-                grabCursor: true,
-                centeredSlides: true,
-                autoplay: {
-                    delay: 2500,
-                    disableOnInteraction: false,
+        new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            loop: true,
+            grabCursor: true,
+            centeredSlides: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true, // Pauses autoplay when mouse hovers over the slider
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
                 },
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
+                768: {
+                    slidesPerView: 2,
                 },
-                breakpoints: {
-                    0: {
-                        slidesPerView: 1,
-                    },
-                    768: {
-                        slidesPerView: 2,
-                    },
-                    1024: {
-                        slidesPerView: 3,
-                    },
+                1024: {
+                    slidesPerView: 3,
                 },
-            });
+            },
+        });
+    }
+
+    // Global Event Delegation for Modals to handle dynamically generated Swiper clones
+    document.addEventListener('click', (e) => {
+        const target = e.target;
+        if (!target) return;
+        
+        // Check if user clicked on a project image trigger
+        const trigger = target.closest('.project-trigger');
+        if (trigger) {
+            e.preventDefault();
+            const modalId = trigger.getAttribute('data-modal');
+            if (modalId) {
+                const modal = document.getElementById(modalId);
+                if (modal) {
+                    modal.classList.add('active');
+                }
+            }
+            return;
         }
 
-        // Global Event Delegation for Modals to handle dynamically generated Swiper clones
-        document.addEventListener('click', (e) => {
-            const target = e.target as HTMLElement;
-            
-            // Check if user clicked on a project image trigger
-            const trigger = target.closest('.project-trigger');
-            if (trigger) {
-                e.preventDefault();
-                const modalId = trigger.getAttribute('data-modal');
-                if (modalId) {
-                    const modal = document.getElementById(modalId);
-                    if (modal) {
-                        modal.classList.add('active');
-                    }
-                }
-                return;
+        // Check if user clicked on the close button
+        const closeBtn = target.closest('.boton-cerrar');
+        if (closeBtn) {
+            const modal = closeBtn.closest('.overlay');
+            if (modal) {
+                modal.classList.remove('active');
             }
+            return;
+        }
 
-            // Check if user clicked on the close button
-            const closeBtn = target.closest('.boton-cerrar');
-            if (closeBtn) {
-                const modal = closeBtn.closest('.overlay');
-                if (modal) {
-                    modal.classList.remove('active');
-                }
-                return;
-            }
-
-            // Check if user clicked on the backdrop overlay
-            if (target.classList.contains('overlay')) {
-                target.classList.remove('active');
-                return;
-            }
-        });
+        // Check if user clicked on the backdrop overlay
+        if (target.classList.contains('overlay')) {
+            target.classList.remove('active');
+            return;
+        }
     });
 </script>

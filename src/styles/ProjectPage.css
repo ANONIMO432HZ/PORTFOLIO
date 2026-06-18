@@ -312,3 +312,61 @@
 	transform: scale(1.15);
 	opacity: 1;
 }
+
+/* Swiper Navigation Buttons Premium Styling */
+.proyectos-slider .swiper-button-prev,
+.proyectos-slider .swiper-button-next {
+	color: var(--black);
+	background: rgba(255, 255, 255, 0.45);
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
+	width: 5rem;
+	height: 5rem;
+	border-radius: 50%;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+	border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.proyectos-slider .swiper-button-prev::after,
+.proyectos-slider .swiper-button-next::after {
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+.proyectos-slider .swiper-button-prev:hover,
+.proyectos-slider .swiper-button-next:hover {
+	color: var(--white);
+	background: var(--secundario);
+	transform: scale(1.1);
+	box-shadow: 0 6px 20px rgba(21, 184, 202, 0.4);
+}
+
+/* Dark Mode Navigation Styling */
+body.dark .proyectos-slider .swiper-button-prev,
+body.dark .proyectos-slider .swiper-button-next {
+	color: var(--white);
+	background: rgba(255, 255, 255, 0.05);
+	border-color: rgba(255, 255, 255, 0.08);
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+}
+
+body.dark .proyectos-slider .swiper-button-prev:hover,
+body.dark .proyectos-slider .swiper-button-next:hover {
+	color: var(--black);
+	background: var(--green);
+	box-shadow: 0 6px 20px rgba(0, 229, 254, 0.4);
+}
+
+/* Responsive adjustment for swiper navigation buttons */
+@media (max-width: 768px) {
+	.proyectos-slider .swiper-button-prev,
+	.proyectos-slider .swiper-button-next {
+		width: 4rem;
+		height: 4rem;
+	}
+	.proyectos-slider .swiper-button-prev::after,
+	.proyectos-slider .swiper-button-next::after {
+		font-size: 1.6rem;
+	}
+}
