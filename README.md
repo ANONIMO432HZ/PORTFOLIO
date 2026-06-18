@@ -1,4 +1,4 @@
-# Portfolio Personal - Royer Valencia Arias (ANONIMO432HZ)
+# Portfolio Personal
 
 Un portfolio web dinámico, responsivo y de alto rendimiento diseñado para destacar proyectos de desarrollo de software y ciberseguridad. Construido sobre **Astro**, cuenta con soporte multi-idioma nativo (i18n), tema oscuro persistente y un diseño visualmente premium con fondos de partículas y animaciones fluidas.
 
@@ -16,7 +16,6 @@ Para poner en marcha el proyecto localmente, sigue estos pasos:
    ```sh
    npm run dev
    ```
-   *El sitio estará disponible en [http://localhost:4321/](http://localhost:4321/)*.
 3. **Validar calidad de código y formatear:**
    ```sh
    npm run check
