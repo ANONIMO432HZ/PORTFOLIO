@@ -291,3 +291,24 @@
 		width: 60%;
 	}
 }
+
+.proyectos-slider-tec {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1.8rem;
+	margin: 2rem 0;
+}
+
+.proyectos-slider-tec img {
+	width: 3.2rem;
+	height: 3.2rem;
+	object-fit: contain;
+	opacity: 0.9;
+	transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.proyectos-slider-tec img:hover {
+	transform: scale(1.15);
+	opacity: 1;
+}
