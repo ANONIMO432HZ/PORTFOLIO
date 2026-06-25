@@ -10,10 +10,10 @@
 
 	"greeting": "Hola",
 	"name": "Soy ANONIMO432HZ",
-	"rol": "Un entusiasta del ciberespacio / Full-stack developer",
+	"rol": "Un entusiasta del ciberespacio",
 
 	"im": "Quién soy",
-	"description": "Mi nombre es ROYER VALENCIA ARIAS y soy estudiante de programación y futuro full-stack developer.",
+	"description": "Mi nombre es ROYER VALENCIA ARIAS y soy estudiante de programación web y futuro full-stack developer.",
 	"my-description": "Me dedico al desarrollo web y la ciberseguridad. Estoy en constante aprendizaje de las tecnologías y busco siempre aprender nuevas herramientas para enriquecer mis habilidades y aplicar las mejores prácticas.",
 	"years": "Edad: ",
 	"from": "Desde: ",
@@ -23,7 +23,7 @@
 	"design": "Diseño UX/UI",
 	"design-info": "Diseño de interfaz atractivas para usuarios tanto en web como en móvil, aprovechando al máximo la marca o el producto que el cliente dese explotar en su sitio web",
 	"development": "Desarrollo WEB",
-	"development-info": "Creación de páginas web, bien estructuradas, buen diseño responsivo, paleta de colores atractivas, con interacciones que le den al usuario satisfacción cuando navegue por el sitio web.",
+	"development-info": "Creación de páginas web estaticas y dinamicas con tecnologías y frameworks modernos, con buen diseño responsivo, paleta de colores atractivas, optimizadas para SEO y con un tiempo de carga optimo.",
 	"optimization": "Optimización web",
 	"optimization-info": "Optimización completa de tu pagina web, mejorando la velocidad de carga, usando imágenes optimizadas,, un buen URL, para dar una mejor experiencia a los usuarios que visiten el sitio web ",
 
